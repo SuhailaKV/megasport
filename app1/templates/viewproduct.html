@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>photo</th>
+                <th> Product Name</th>
+                <th> Description</th>
+                <th>Net_weight</th>
+                <th>Directions</th>
+                <th> Warnings</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in u %}
+            <tr>
+                <td>{{i.photo}}</td>
+                <td>{{i.Name}}</td>
+                <td>{{i.Description}}</td>
+                <td>{{i.Net_weight}}</td>
+                <td>{{i.Directions}}</td>
+                <td>{{i.Warnings}}</td>
+                
+                
+               </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <table>
+        <tr>
+            <th>Product name</th>
+            <th> i Name</th>
+            <th> value 1</th>
+            <th> value 2</th>
+        </tr>
+        <tbody>
+        {% for i in t %}
+        <tr>
+            <td>{{i.product}}</td>
+            <td>{{i.i_name}}</td>
+            <td>{{i.value1}}</td>
+            <td>{{i.value2}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>
