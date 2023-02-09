@@ -2,11 +2,12 @@ from django.shortcuts import render
 from app1.models import *
 from django.core.mail import send_mail
 from django.views import View
-from django.views.generic import ListView
+
 
 def index(request):
     obj=Category.objects.all()
-    return render(request,'index.html',{'u':obj})
+    obj2=Products.objects.all()
+    return render(request,'index.html',{'u':obj,'x':obj2})
 
    
 
