@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#$m6ds6ca4@2cl+0kilgdd-8+58jxj@rvk^_%@snezb)4^e67_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -72,6 +72,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'megasport.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -84,8 +85,6 @@ DATABASES = {
         'HOST': 'localhost'
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -128,6 +127,7 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
