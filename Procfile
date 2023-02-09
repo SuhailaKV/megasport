@@ -1,0 +1,1 @@
+web: gunicorn megasport.wsgi --log-file -
